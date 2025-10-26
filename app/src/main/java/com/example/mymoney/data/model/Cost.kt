@@ -5,6 +5,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.mymoney.data.COSTS_TABLE
+import java.util.*
 
 @Entity(tableName = COSTS_TABLE)
 data class Cost (
@@ -14,5 +15,6 @@ data class Cost (
     @ColumnInfo(index = true)
     var typeId: Int = 0,
     var cost: Float = 0F,
-    var description: String = ""
+    var description: String = "",
+    var buyDate: Date = Date()
 )
